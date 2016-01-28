@@ -1,0 +1,55 @@
+package exercici3;
+
+/**
+ * Classe que representa una entitat Camio
+ * 
+ * @author sergi grau
+ * @version 1.0, 18.01.2010
+ */
+public class Camio extends Vehicle {
+	private int TARA;
+	private int PMA;
+	private int numeroEixos;
+	/**
+	 * Constructor amb 6 par�metres
+	 * @param model
+	 * @param potencia
+	 * @param color
+	 * @param tARA
+	 * @param pMA
+	 * @param numeroEixos
+	 */
+	public Camio(String model, int potencia, String color, int tARA, int pMA,
+			int numeroEixos) {
+		super(model, potencia, color);
+		TARA = tARA;
+		PMA = pMA;
+		this.numeroEixos = numeroEixos;
+	}
+	
+	/**  M�tode accessor que retorna la TARA
+	 * @return TARA
+	 */
+	public int getTARA() {
+		return TARA;
+	}
+
+	/**  M�tode accessor que retorna PMA
+	 * @return pMA
+	 */
+	public int getPMA() {
+		return PMA;
+	}
+
+	/**  M�tode accessor que retorna el numeroEixos
+	 * @return numeroEixos
+	 */
+	public int getNumeroEixos() {
+		return numeroEixos;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+TARA+"\t"+PMA+"\t"+numeroEixos;
+	}
+}
